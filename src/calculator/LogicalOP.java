@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.Scanner;
+
 public class LogicalOP {
 
 
@@ -248,15 +250,112 @@ public class LogicalOP {
         }
     }
 
-    public void to_100_odd_while(int i){
-          i = 1;
-        while (i<=100){
+    public void to_100_odd_while(int i) {
+        i = 1;
+        while (i <= 100) {
             System.out.println(i);
-            i= i+2;
+            i = i + 2;
         }
     }
 
 
+    public void array100() {
+        int[] x = new int[100];
+        for (int i = 1; i < 100; i++) {
+            x[i] = i;
+            System.out.println(x[i]);
+        }
+    }
+
+
+    public int[] array_100_even(int[] x) {
+        int count = 0;
+        for (int i = 2; i < 100; i += 2) {
+            x[count++] = i;
+        }
+        return x;
+    }
+
+    public double array_average(int[] x) {
+        int s = 0;
+        for (int i = 0; i < x.length; i++) {
+            s += x[i];
+        }
+        return s / x.length;
+    }
+
+
+    public boolean search(String[] x, String y) {
+        for (int i = 0; i < x.length; i++) {
+            if (x[i].equals(y))
+                return true;
+        }
+        return false;
+
+
+    }
+
+    public int search_location(int[] x, int y) {
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] == y)
+                return i;
+        }
+
+        return -1;
+
+
+    }
+
+    public void Lines(String[] s) {
+        for (int i = 0; i < 10; i++) {
+            for (int b = 0; b < 10; b++) {
+                System.out.print(s[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public int[] remove_number(int[] x, int y) {
+        int i;
+        for (i = 0; i < x.length; i++) {
+            if (x[i] == y) {
+                break;
+            }
+        }
+        int[] z = new int[x.length - 1];
+        if (i != x.length) {
+            int count = 0;
+
+            for (int j = 0; j < x.length; j++) {
+                if (i != j) {
+                    z[count++] = x[j];
+                }
+            }
+        }
+        return z;
+
+
+    }
+
+    public int second_smallest(int[] x) {
+        int min = x[0];
+        int min2 = x[1];
+        for (int i = 2; i < x.length; i++) {
+            if (x[i] < min) {
+                min = x[i];
+                min2 = min;
+            } else if (x[i] < min2) {
+                min2 = x[i];
+            }
+        }
+        return min2;
+    }
+
+    public void copy_array(int[] x, int[] y) {
+        for (int i = 0; i < x.length; i++) {
+            y[i] = x[i];
+        }
+    }
 
 }
 

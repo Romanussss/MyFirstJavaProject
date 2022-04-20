@@ -39,9 +39,28 @@ public class Main3 {
         op.from_low_to_high_while(30, 20);
         op.to_100_even_while(2);
         op.to_100_odd_while(3);
-        System.out.println(op.while_sum(111, 8899));
-
-
+        System.out.println(calc.substract(3.2, 1.4));
+        op.array100();
+        int[] x = new int[50];
+        op.array_100_even(x);
+        System.out.println(x[2]);
+        int[] y = {5, 8, 45, 26, 35, 7, 74};
+        System.out.println(op.array_average(y));
+        String[] s = {"da", "dwadfwa", "fffef"};
+        System.out.println(op.search(s, "dap"));
+        System.out.println(op.search_location(y, 8));
+        String[] s1 = {"-", "-", "-", "-", "-", "-", "-", "-", "-", "-"};
+        op.Lines(s1);
+        int[] z = op.remove_number(y, 5);
+        for (int i = 0; i < z.length; i++) {
+            System.out.println(z[i]);
+        }
+        System.out.println(op.second_smallest(y));
+        int[] t = new int[y.length];
+        op.copy_array(y, t);
+        for (int i = 0; i < t.length; i++) {
+            System.out.print(t[i] + " ");
+        }
     }
 
 

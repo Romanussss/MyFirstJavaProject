@@ -11,6 +11,11 @@ public class Calculator {
 
     }
 
+    public double substract(double nr1, double nr2){
+        return nr1-nr2;
+    }
+
+
     public int Multiply (int firstnumber, int secondnumber){
 
         int result = firstnumber * secondnumber;
@@ -67,6 +72,18 @@ public class Calculator {
         int result = firstnumber + secondnumber;
         return result;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
